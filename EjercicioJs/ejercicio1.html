@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bethsaida Chea</title>
+</head>
+
+<body>
+  <h1> Ejercicio 1 JavaScript</h1>
+  <script>
+
+    function GenerarFibonacci() {
+      let numeroDeElementos = prompt('Ingrese el número de elementos de la serie Fibonacci:');
+
+      var fibonacci = [];
+      fibonacci[0] = 0;
+      fibonacci[1] = 1;
+      for (var i = 2; i < numeroDeElementos; i++) {
+        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+      }
+      return fibonacci;
+    }
+
+    document.write(GenerarFibonacci());
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bethsaida Chea</title>
+</head>
+
+<body>
+    <h1> Ejercicio 2 JavaScript:</h1>
+    <script>
+
+        function Ordenado() {
+
+            let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+            let miarray = new Array;
+            for (let k = 0; k < inicio.length; k++) {
+                if (typeof (inicio[k]) === 'number') {
+                    miarray.push(inicio[k]);
+
+                }
+            }
+
+            for (let i = 0; i < miarray.length; i++) { //bucle mientras sea menor a la longitud del arreglo
+                for (let j = 0; j < miarray.length - 1 - i; j++) {//bucle mientras sea menor a la longitud del arreglo
+                    if (miarray[j] > miarray[j + 1]) { //si el primer valor es mayor que el segundo entonces
+                        [miarray[j], miarray[j + 1]] = [miarray[j + 1], miarray[j]]; // el primer valor el segundo valor van a ser iguales al segundo valor y el primero
+                    }
+                }
+            }
+
+
+            return miarray;
+        }
+        document.write(Ordenado());
+    </script>
+</body>
+
+</html>
